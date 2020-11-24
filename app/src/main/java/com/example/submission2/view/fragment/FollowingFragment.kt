@@ -35,7 +35,7 @@ class FollwingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_follwing, container, false)
+        return inflater.inflate(R.layout.fragment_following, container, false)
     }
 
     companion object {
