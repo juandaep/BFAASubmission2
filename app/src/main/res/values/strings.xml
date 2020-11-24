@@ -17,4 +17,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="vector">Vector</string>
+    <string name="image_illustration">Image Illustration</string>
+    <string name="nothing_followed">Nothing Followed</string>
+    <string name="nothing_following">Nothing Following</string>
+    <string name="username_not_found">Username Not Found</string>
+    <string name="search">Search</string>
+    <string name="change_language_setting">Change Language Setting</string>
+    <string name="hint_search">Github Username</string>
 </resources>
