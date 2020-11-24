@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Submission2</string>
+    <string name="github_users_app">Github Users App</string>
+    <string name="github_logo">Github Logo</string>
+    <string name="avatar_user">Avatar User</string>
+    <string name="username">Username</string>
+    <string name="link_github">Link Github</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="location">Location</string>
+    <string name="_10">10</string>
+    <string name="_15">15</string>
+    <string name="_20">20</string>
+    <string name="repository">Repository</string>
+    <string name="followers">Followers</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+</resources>
