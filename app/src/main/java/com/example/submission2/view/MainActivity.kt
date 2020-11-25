@@ -84,6 +84,7 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         })
+
         return true
     }
 
@@ -111,6 +112,4 @@ class MainActivity : AppCompatActivity() {
             progress_circular.visibility = View.GONE
         }
     }
-
-
 }

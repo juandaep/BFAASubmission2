@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Github Users</string>
+    <string name="github_users_app">Github Users App</string>
+    <string name="github_logo">Github Logo</string>
+    <string name="avatar_user">Avatar Pengguna</string>
+    <string name="username">Username</string>
+    <string name="link_github">Link Github</string>
+    <string name="name">Nama</string>
+    <string name="company">Perusahaan</string>
+    <string name="location">Lokasi</string>
+    <string name="_10">10</string>
+    <string name="_15">15</string>
+    <string name="_20">20</string>
+    <string name="repository">Repository</string>
+    <string name="followers">Mengikuti</string>
+    <string name="following">Pengikut</string>
+
+    <string name="vector">Vector</string>
+    <string name="image_illustration">Image Illustration</string>
+    <string name="nothing_followed">Tidak ada mengikuti</string>
+    <string name="nothing_following">Tidak ada mengikuti</string>
+    <string name="username_not_found">Username tidak ditemukan</string>
+    <string name="search">Cari</string>
+    <string name="change_language_setting">Ganti pengaturan bahasa</string>
+    <string name="hint_search">Github Username</string>
+    <string name="juanda_esa_putra">Juanda Esa Putra</string>
+</resources>

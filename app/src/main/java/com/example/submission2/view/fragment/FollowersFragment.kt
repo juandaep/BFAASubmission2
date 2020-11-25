@@ -5,29 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.submission2.R
+import com.example.submission2.adapter.FollowersAdapter
+import com.example.submission2.viewModel.FollowersViewModel
+import kotlinx.android.synthetic.main.fragment_followers.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [FollowersFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FollowersFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private lateinit var adapter: FollowersAdapter
+    private lateinit var followersViewModel: FollowersViewModel
+
+    companion object{
+        const val EXTRA_FOLLOWERS = "extra_followers"
     }
 
     override fun onCreateView(
@@ -38,23 +30,31 @@ class FollowersFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_followers, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FollowersFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FollowersFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        adapter = FollowersAdapter()
+        adapter.notifyDataSetChanged()
+
+        showRecyclerView()
+
+        followersViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(FollowersViewModel::class.java)
+        if (arguments != null) {
+            val username = arguments?.getString(EXTRA_FOLLOWERS)
+            followersViewModel.setFollowersUser(username.toString())
+        }
+
+        followersViewModel.getFollowersUser().observe(viewLifecycleOwner, { followers ->
+            if (followers.size > 0) {
+                adapter.setData(followers)
+            } else {
+                img_follow.visibility = View.VISIBLE
             }
+        })
+    }
+
+    private fun showRecyclerView() {
+        rv_list_followers.layoutManager = LinearLayoutManager(context)
+        rv_list_followers.adapter = adapter
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Submission2</string>
+    <string name="app_name">Github Users</string>
     <string name="github_users_app">Github Users App</string>
     <string name="github_logo">Github Logo</string>
     <string name="avatar_user">Avatar User</string>
@@ -24,4 +24,5 @@
     <string name="search">Search</string>
     <string name="change_language_setting">Change Language Setting</string>
     <string name="hint_search">Github Username</string>
+    <string name="juanda_esa_putra">Juanda Esa Putra</string>
 </resources>
