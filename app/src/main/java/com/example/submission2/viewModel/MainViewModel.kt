@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.submission2.AppConstant
+import com.example.submission2.BuildConfig
 import com.example.submission2.model.User
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
@@ -19,7 +19,7 @@ class MainViewModel: ViewModel() {
     fun setUsers(username: String){
         val listItems = ArrayList<User>()
 
-        val apiKey = AppConstant.API_KEY
+        val apiKey = BuildConfig.API_KEY
         val url = "https://api.github.com/search/users?q=$username"
 
         val client = AsyncHttpClient()
